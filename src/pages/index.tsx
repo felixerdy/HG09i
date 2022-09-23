@@ -1,12 +1,13 @@
 import styled from "styled-components";
-import { List, Modal, TaskBar } from "@react95/core";
+import { List, TaskBar } from "@react95/core";
 
 import logo from "../assets/logo.png";
-import { User3, Wangimg128, WindowsExplorer } from "@react95/icons";
+import { CdMusic, User3, Wangimg128, WindowsExplorer } from "@react95/icons";
 import { useState } from "react";
 import Umfrage from "../components/Umfrage";
 import Explorer from "../components/Explorer";
 import WarningAlert from "../components/WarningAlert";
+import Winamp from "../components/Winamp";
 
 const Centered = styled.div`
   display: flex;
@@ -19,6 +20,7 @@ const Centered = styled.div`
 function IndexPage() {
   const [explorer, setExplorer] = useState(true);
   const [umfrage, setUmfrage] = useState(false);
+  const [winamp, setWinamp] = useState(false);
 
   const [warningAlert, setWarningAlert] = useState(false);
 
@@ -26,6 +28,7 @@ function IndexPage() {
     <Centered>
       {explorer && <Explorer onClose={() => setExplorer(false)} />}
       {umfrage && <Umfrage onClose={() => setUmfrage(false)} />}
+      {winamp && <Winamp onClose={() => setWinamp(false)} />}
 
       {warningAlert && <WarningAlert onClose={() => setWarningAlert(false)} />}
 
@@ -43,13 +46,19 @@ function IndexPage() {
               icon={<Wangimg128 variant="32x32_4" />}
               onClick={() => setWarningAlert(true)}
             >
-              Gallery
+              Galerie
             </List.Item>
             <List.Item
               icon={<User3 variant="32x32_4" />}
               onClick={() => setUmfrage(true)}
             >
-              BWL
+              Umfrage
+            </List.Item>
+            <List.Item
+              icon={<CdMusic variant="32x32_4" />}
+              onClick={() => setWinamp(true)}
+            >
+              Musik
             </List.Item>
           </List>
         }
