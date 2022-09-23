@@ -14,7 +14,6 @@ const Umfrage = ({ onClose }: Props) => {
   const history = useHistory();
 
   useEffect(() => {
-    console.log(clippy);
     if (clippy) clippy.play("Thinking");
   }, []);
 
