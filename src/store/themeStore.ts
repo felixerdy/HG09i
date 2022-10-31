@@ -1,0 +1,41 @@
+import themes from "@react95/core/@types/ThemeProvider/themes";
+import { atom } from "jotai";
+
+export type Theme =
+  | "win95"
+  | "counterStrike"
+  | "bee"
+  | "pamelaAnderson"
+  | "azureOrange"
+  | "olive"
+  | "vaporTeal"
+  | "matrix"
+  | "vermillion"
+  | "tooSexy"
+  | "ninjaTurtles"
+  | "tokyoDark"
+  | "molecule"
+  | "travel"
+  | "theSixtiesUSA"
+  | "candy"
+  | "modernDark"
+  | "storm"
+  | "millenium"
+  | "spruce"
+  | "slate"
+  | "rose"
+  | "rainyDay"
+  | "plum"
+  | "marine"
+  | "maple"
+  | "lilac"
+  | "blackAndWhite"
+  | "highContrast"
+  | "eggplant"
+  | "brick"
+  | "water"
+  | "coldGray"
+  | "lilacRoseDark"
+  | "violetDark";
+
+export const themeAtom = atom<Theme>("win95");

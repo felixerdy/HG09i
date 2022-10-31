@@ -3,13 +3,55 @@ import { Settings } from "@react95/icons";
 import { AGENTS } from "@react95/clippy";
 import { useContext } from "react";
 import { ClippyAgentContext } from "../App";
+import { Theme, themeAtom } from "../store/themeStore";
+import { useAtom } from "jotai";
 
 type Props = {
   onClose: () => void;
 };
 
+const themes: Theme[] = [
+  "win95",
+  "counterStrike",
+  "bee",
+  "pamelaAnderson",
+  "azureOrange",
+  "olive",
+  "vaporTeal",
+  "matrix",
+  "vermillion",
+  "tooSexy",
+  "ninjaTurtles",
+  "tokyoDark",
+  "molecule",
+  "travel",
+  "theSixtiesUSA",
+  "candy",
+  "modernDark",
+  "storm",
+  "millenium",
+  "spruce",
+  "slate",
+  "rose",
+  "rainyDay",
+  "plum",
+  "marine",
+  "maple",
+  "lilac",
+  "blackAndWhite",
+  "highContrast",
+  "eggplant",
+  "brick",
+  "water",
+  "coldGray",
+  "lilacRoseDark",
+  "violetDark",
+];
+
 const SettingsModal = ({ onClose }: Props) => {
   const { agent, changeAgent } = useContext(ClippyAgentContext);
+
+  const [theme, setTheme] = useAtom(themeAtom);
 
   return (
     <Modal
@@ -44,6 +86,26 @@ const SettingsModal = ({ onClose }: Props) => {
             }
           }}
         ></Dropdown>
+        <span style={{ fontWeight: "bold" }}>Theme</span>
+        <Dropdown
+          options={themes}
+          defaultValue={theme}
+          onChange={(e) => {
+            setTheme((e.target as any).value as Theme);
+          }}
+        ></Dropdown>
+        <hr />
+        <a
+          href="https://umami-eta-one.vercel.app/share/j7UL15aK/HG09i"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Analytics
+        </a>
+        <br />
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+          Weitere Einstellungen
+        </a>
       </div>
     </Modal>
   );
