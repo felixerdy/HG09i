@@ -19,6 +19,7 @@ import SettingsModal from "../components/Settings";
 import { ClippyProvider, AGENTS } from "@react95/clippy";
 import { ClippyAgentContext } from "../App";
 import Minesweeper from "../components/Minesweeper";
+import Gallery from "../components/Gallery";
 
 const Centered = styled.div`
   display: flex;
@@ -34,6 +35,7 @@ function IndexPage() {
   const [winamp, setWinamp] = useState(false);
   const [settings, setSettings] = useState(false);
   const [minesweeper, setMinesweeper] = useState(false);
+  const [gallery, setGallery] = useState(false);
 
   const [warningAlert, setWarningAlert] = useState(false);
 
@@ -47,6 +49,7 @@ function IndexPage() {
         {winamp && <Winamp onClose={() => setWinamp(false)} />}
         {settings && <SettingsModal onClose={() => setSettings(false)} />}
         {minesweeper && <Minesweeper onClose={() => setMinesweeper(false)} />}
+        {gallery && <Gallery onClose={() => setGallery(false)} />}
 
         {warningAlert && (
           <WarningAlert onClose={() => setWarningAlert(false)} />
@@ -69,7 +72,7 @@ function IndexPage() {
               </List.Item>
               <List.Item
                 icon={<Wangimg128 variant="32x32_4" />}
-                onClick={() => setWarningAlert(true)}
+                onClick={() => setGallery(true)}
               >
                 Galerie
               </List.Item>
