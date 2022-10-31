@@ -1,1 +1,1 @@
-declare module '@react95/clippy';
+declare module "@react95/clippy";

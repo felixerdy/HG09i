@@ -8,6 +8,7 @@ import {
   User3,
   Wangimg128,
   WindowsExplorer,
+  Winmine1,
 } from "@react95/icons";
 import { useContext, useState } from "react";
 import Umfrage from "../components/Umfrage";
@@ -17,6 +18,7 @@ import Winamp from "../components/Winamp";
 import SettingsModal from "../components/Settings";
 import { ClippyProvider, AGENTS } from "@react95/clippy";
 import { ClippyAgentContext } from "../App";
+import Minesweeper from "../components/Minesweeper";
 
 const Centered = styled.div`
   display: flex;
@@ -31,6 +33,7 @@ function IndexPage() {
   const [umfrage, setUmfrage] = useState(false);
   const [winamp, setWinamp] = useState(false);
   const [settings, setSettings] = useState(false);
+  const [minesweeper, setMinesweeper] = useState(false);
 
   const [warningAlert, setWarningAlert] = useState(false);
 
@@ -43,12 +46,18 @@ function IndexPage() {
         {umfrage && <Umfrage onClose={() => setUmfrage(false)} />}
         {winamp && <Winamp onClose={() => setWinamp(false)} />}
         {settings && <SettingsModal onClose={() => setSettings(false)} />}
+        {minesweeper && <Minesweeper onClose={() => setMinesweeper(false)} />}
 
         {warningAlert && (
           <WarningAlert onClose={() => setWarningAlert(false)} />
         )}
 
-        <img src={logo} alt="Windows 95 logo" style={{ width: 200 }} />
+        <img
+          src={logo}
+          alt="Windows 95 logo"
+          style={{ width: 200, userSelect: "none" }}
+          draggable={false}
+        />
         <TaskBar
           list={
             <List>
@@ -81,6 +90,12 @@ function IndexPage() {
                 onClick={() => setSettings(true)}
               >
                 Einstellungen
+              </List.Item>
+              <List.Item
+                icon={<Winmine1 variant="32x32_4" />}
+                onClick={() => setMinesweeper(true)}
+              >
+                Minesweeper
               </List.Item>
             </List>
           }
