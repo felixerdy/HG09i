@@ -95,6 +95,11 @@ const SettingsModal = ({ onClose }: Props) => {
           }}
         ></Dropdown>
         <hr />
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+          Weitere Einstellungen
+        </a>
+        <br />
+        <br />
         <a
           href="https://umami-eta-one.vercel.app/share/j7UL15aK/HG09i"
           rel="noreferrer"
@@ -103,8 +108,13 @@ const SettingsModal = ({ onClose }: Props) => {
           Analytics
         </a>
         <br />
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-          Weitere Einstellungen
+        <br />
+        <a
+          href="https://github.com/felixerdy/HG09i"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Link zum Repo
         </a>
       </div>
     </Modal>
