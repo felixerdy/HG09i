@@ -118,7 +118,7 @@ const Gallery = ({ onClose }: Props) => {
                 marginRight: "1rem",
               }}
             >
-              Zurück
+              Zurueck
             </Button>
             <Button onClick={nextImage} disabled={index === MAX_IMAGE_INDEX}>
               Weiter

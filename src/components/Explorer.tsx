@@ -58,7 +58,7 @@ const Explorer = ({ onClose }: Props) => {
       <Frame bg="white" boxShadow="in" padding="1rem">
         <Party></Party>
         <p>
-          Willkommen auf der Info Seite für das HG09i Klassentreffen 2023. Hier
+          Willkommen auf der Info Seite fuer das HG09i Klassentreffen 2023. Hier
           halten wir euch auf dem neuesten Stand.{" "}
           <img src={cool_dog} style={{ height: "1rem" }} alt="Cool doge" />
         </p>
@@ -66,7 +66,7 @@ const Explorer = ({ onClose }: Props) => {
           Save the Date: <u>19. August 2023</u>
         </h2>
         <p>
-          Wir planen das Event am 19. August 2023 in Münster. Aenderungen bitte
+          Wir planen das Event am 19. August 2023 in Muenster. Aenderungen bitte
           vorbehalten.
         </p>
         <h3>Rahmendaten / Auswertung der Umfrage</h3>
@@ -75,14 +75,14 @@ const Explorer = ({ onClose }: Props) => {
             Aktion tagsuesber (Start am fruehen Nachmittag) und Abend, keine
             Uebernachtung
           </li>
-          <li>Münster</li>
+          <li>Muenster</li>
           <li>Kleine Aktion, Fokus auf geilen Abend</li>
           <li>19. August 2023</li>
           <li>
             Lehrer:innen werden eingeladen (Harnack, Bittner, Siebert,
             Kretschmar)
           </li>
-          <li>Für Essen und Getraenke wird gesorgt sein</li>
+          <li>Fuer Essen und Getraenke wird gesorgt sein</li>
           <li>Preis pro Person: 80€ (ggf. mit freiwilligen Solibeitrag)</li>
         </ul>
       </Frame>

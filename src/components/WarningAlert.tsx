@@ -9,7 +9,7 @@ const WarningAlert = ({ onClose }: Props) => {
     <Alert
       title="HG09i System"
       type={"warning"}
-      message="Diese Funktion wird noch nicht unterstützt."
+      message="Diese Funktion wird noch nicht unterstuetzt."
       closeAlert={onClose}
       hasSound={true}
       buttons={[{ value: "OK", onClick: onClose }]}
