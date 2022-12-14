@@ -80,7 +80,7 @@ const Explorer = ({ onClose }: Props) => {
           <li>19. August 2023</li>
           <li>
             Lehrer:innen werden eingeladen (Harnack, Bittner, Siebert,
-            Kretschmar)
+            Kretschmar, Levenig)
           </li>
           <li>Fuer Essen und Getraenke wird gesorgt sein</li>
           <li>Preis pro Person: 80€ (ggf. mit freiwilligen Solibeitrag)</li>
