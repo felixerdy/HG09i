@@ -101,15 +101,6 @@ const SettingsModal = ({ onClose }: Props) => {
         <br />
         <br />
         <a
-          href="https://umami-eta-one.vercel.app/share/j7UL15aK/HG09i"
-          rel="noreferrer"
-          target="_blank"
-        >
-          Analytics
-        </a>
-        <br />
-        <br />
-        <a
           href="https://github.com/felixerdy/HG09i"
           rel="noreferrer"
           target="_blank"
