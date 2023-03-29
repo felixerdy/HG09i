@@ -14,6 +14,14 @@ ReactDOM.render(
         <App />
       </>
     </ThemeProvider>
+    {process.env.NODE_ENV === 'production' && (
+      <script
+          async
+          defer
+          data-website-id="ac2e5b24-87d2-49b9-9702-35d21ae7c7ba"
+          src="https://umami-eta-one.vercel.app/umami.js"
+      ></script>
+    )}
   </React.StrictMode>,
   document.getElementById("root")
 );
