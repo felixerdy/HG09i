@@ -1,36 +1,11 @@
 import { Frame, List, Modal } from "@react95/core";
 import { WindowsExplorer } from "@react95/icons";
-import party_seal from "../assets/gifs/party_seal.gif";
-import christmas_parrot from "../assets/gifs/christmas_parrot.gif";
+import bicycle from "../assets/gifs/bicycle.gif";
 import cool_dog from "../assets/gifs/cool-doge.gif";
-import meow_party from "../assets/gifs/meow_party.gif";
 
 type Props = {
   onClose: () => void;
 };
-
-function Party({ num = 14 }: { num?: number }) {
-  const now = new Date();
-  let emoji = party_seal;
-
-  // christmas_parrot on nikolaus
-  if (now.getMonth() === 11 && now.getDate() === 6) {
-    emoji = christmas_parrot;
-  }
-  return (
-    <div>
-      {new Array(14).fill(
-        <img
-          src={emoji}
-          style={{
-            height: "1rem",
-          }}
-          alt="Party Seal"
-        />
-      )}
-    </div>
-  );
-}
 
 const Explorer = ({ onClose }: Props) => {
   return (
@@ -55,8 +30,15 @@ const Explorer = ({ onClose }: Props) => {
       ]}
     >
       <h1>HG09i Klassentreffen</h1>
-      <Frame bg="white" boxShadow="in" padding="1rem">
-        <Party></Party>
+      <Frame
+        bg="white"
+        boxShadow="in"
+        padding="1rem"
+        style={{
+          height: "400px",
+          overflowY: "scroll",
+        }}
+      >
         <p>
           Willkommen auf der Info Seite fuer das HG09i Klassentreffen 2023. Hier
           halten wir euch auf dem neuesten Stand.{" "}
@@ -65,26 +47,57 @@ const Explorer = ({ onClose }: Props) => {
         <h2>
           Save the Date: <u>19. August 2023</u>
         </h2>
-        <p>
-          Wir planen das Event am 19. August 2023 in Muenster. Aenderungen bitte
-          vorbehalten.
-        </p>
-        <h3>Rahmendaten / Auswertung der Umfrage</h3>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            overflow: "hidden",
+          }}
+        >
+          <img
+            src={bicycle}
+            style={{
+              height: "7rem",
+              marginBottom: "-1rem",
+              marginTop: "-2rem",
+            }}
+            alt="Bicycle"
+          />
+        </div>
+        <h3>☀️ Das haben wir geplant:</h3>
         <ul>
           <li>
-            Aktion tagsuesber (Start am fruehen Nachmittag) und Abend, keine
-            Uebernachtung
+            Treffen in Muenster am fruehen Nachmittag (gegen 13 Uhr am Hbf)
           </li>
-          <li>Muenster</li>
-          <li>Kleine Aktion, Fokus auf geilen Abend</li>
-          <li>19. August 2023</li>
           <li>
-            Lehrer:innen werden eingeladen (Harnack, Bittner, Siebert,
-            Kretschmar, Levenig, Weinreich)
+            Gemuetliche Fahrradtour rund um Muenster mit vielen Pausen, Spielen
+            und Ueberaschungen
           </li>
-          <li>Fuer Essen und Getraenke wird gesorgt sein</li>
-          <li>Preis pro Person: 80€ (ggf. mit freiwilligen Solibeitrag)</li>
+          <li>
+            Wir werden verschiedene Fahrraeder organisieren (Tandem, Lastenrad,
+            ...), damit auch alle mitfahren koennen.
+          </li>
+          <li>
+            Unsere Lehrer:innen sind mit dabei, teilweise aber erst Abends
+          </li>
+          <li>
+            Gemeinsames Abendessen im{" "}
+            <a href="https://boheme-boulette.de/">Bohème Boulette</a>
+          </li>
+          <li>Geschichten von früher erzaehlen</li>
         </ul>
+        <h3>💸 Preis pro Person: 70€</h3>
+        <p>
+          Im Preis enthalten sind die Fahrraeder, Snacks + Getraenke waehrend
+          der Radtour, Abendessen und Getraenke im Bohème Boulette, Briefporto
+          sowie die Domain dieser Website.
+        </p>
+        <h3>❓ Wie geht es weiter?</h3>
+        <p>
+          Markiert euch den Termin im Kalender. In unserer WhatsApp Gruppe
+          werden wir euch bitten, den Betrag zu ueberweisen. Sobald wir das Geld
+          haben, ist euer Platz sicher.
+        </p>
       </Frame>
     </Modal>
   );

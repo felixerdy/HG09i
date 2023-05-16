@@ -4,6 +4,8 @@ import { List, TaskBar } from "@react95/core";
 import logo from "../assets/logo.png";
 import {
   CdMusic,
+  Mapi32501,
+  Mapi32801,
   Settings,
   User3,
   Wangimg128,
@@ -20,6 +22,7 @@ import { ClippyProvider, AGENTS } from "@react95/clippy";
 import { ClippyAgentContext } from "../App";
 import Minesweeper from "../components/Minesweeper";
 import Gallery from "../components/Gallery";
+import Map from "../components/Map";
 
 const Centered = styled.div`
   display: flex;
@@ -36,6 +39,7 @@ function IndexPage() {
   const [settings, setSettings] = useState(false);
   const [minesweeper, setMinesweeper] = useState(false);
   const [gallery, setGallery] = useState(false);
+  const [map, setMap] = useState(true);
 
   const [warningAlert, setWarningAlert] = useState(false);
 
@@ -50,6 +54,7 @@ function IndexPage() {
         {settings && <SettingsModal onClose={() => setSettings(false)} />}
         {minesweeper && <Minesweeper onClose={() => setMinesweeper(false)} />}
         {gallery && <Gallery onClose={() => setGallery(false)} />}
+        {map && <Map onClose={() => setMap(false)} />}
 
         {warningAlert && (
           <WarningAlert onClose={() => setWarningAlert(false)} />
@@ -69,6 +74,12 @@ function IndexPage() {
                 onClick={() => setExplorer(true)}
               >
                 HG09i Explorer
+              </List.Item>
+              <List.Item
+                icon={<Mapi32801 variant="32x32_4" />}
+                onClick={() => setMap(true)}
+              >
+                Karte
               </List.Item>
               <List.Item
                 icon={<Wangimg128 variant="32x32_4" />}
