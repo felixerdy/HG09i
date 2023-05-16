@@ -84,7 +84,7 @@ const Explorer = ({ onClose }: Props) => {
             Gemeinsames Abendessen im{" "}
             <a href="https://boheme-boulette.de/">Bohème Boulette</a>
           </li>
-          <li>Geschichten von früher erzaehlen</li>
+          <li>Geschichten von frueher erzaehlen</li>
         </ul>
         <h3>💸 Preis pro Person: 70€</h3>
         <p>
